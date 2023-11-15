@@ -23,16 +23,17 @@
     <h1 id="activity">Bored? Do something  😒</h1>
     <script>
         function doSomething() {
-            fetch("https://www.boredapi.com/api/activity/")
+            fetch("https://bored-mu.vercel.app/activity")
                 .then(res => res.json())
                 .then(data => {
+                    console.log(data);
                     document.getElementById('activity').innerText = data.activity;
                 })
         }
         // doSomething();
         setInterval(() => {
             doSomething()
-        }, 8000);
+        }, 2000);
     </script>
 
 </body>
